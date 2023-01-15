@@ -1,0 +1,3 @@
+.checkout_page_container {
+  min-height: calc(100vh - (20vh + 150px));
+}

@@ -1,0 +1,57 @@
+.cart_btns_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 225px;
+}
+
+.cart_btn {
+  color: var(--clr-grey-1);
+  font-size: 22.5px;
+  letter-spacing: var(--spacing);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cart_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart_container svg {
+  height: 24px;
+  margin-left: 5px;
+}
+
+.cart_value {
+  position: absolute;
+  top: -10px;
+  right: -16px;
+  background: var(--clr-primary-5);
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 11.25px;
+  color: var(--clr-white);
+  padding: 12px;
+}
+
+.auth_btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  font-size: 22.5px;
+  cursor: pointer;
+  color: var(--clr-grey-1);
+  letter-spacing: var(--spacing);
+}
+
+.auth_btn svg {
+  margin-left: 5px;
+}

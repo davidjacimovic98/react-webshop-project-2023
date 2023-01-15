@@ -1,0 +1,27 @@
+.pagehero_container {
+  background: var(--clr-primary-10);
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  color: var(--clr-primary-1);
+  letter-spacing: var(--spacing);
+  font-size: 24px;
+}
+
+.pagehero_container a {
+  color: var(--clr-primary-3);
+  padding: 7.5px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.pagehero_container a:hover {
+  color: var(--clr-primary-1);
+}
+
+.center_div {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
