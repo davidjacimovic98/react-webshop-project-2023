@@ -1,0 +1,15 @@
+.stars_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star_single {
+  color: #ffb900;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.stars_reviews {
+  margin-left: 8px;
+}

@@ -1,0 +1,23 @@
+.amountbtns_container {
+  display: grid;
+  width: 140px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.amountbtns_container h2 {
+  font-size: 45px;
+}
+
+.amount_btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: 15px 0;
+  width: 30px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
