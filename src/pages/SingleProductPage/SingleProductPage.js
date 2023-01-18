@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import styles from './SingleProductPage.module.css';
-import { useProductsContext } from '../../context/products_context';
-import { single_product_url } from '../../utils/constants';
-import { Link } from 'react-router-dom';
-import { formatPrice } from '../../utils/helpers';
+import React, { useEffect } from "react";
+import styles from "./SingleProductPage.module.css";
+import { useProductsContext } from "../../context/products_context";
+import { single_product_url } from "../../utils/constants";
+import { Link } from "react-router-dom";
+import { formatPrice } from "../../utils/helpers";
 import {
   Loading,
   Error,
@@ -11,8 +11,8 @@ import {
   AddToCart,
   Stars,
   PageHero,
-} from '../../components';
-import { useParams } from 'react-router-dom';
+} from "../../components";
+import { useParams } from "react-router-dom";
 
 const SingleProductPage = () => {
   const { id } = useParams();
@@ -51,11 +51,11 @@ const SingleProductPage = () => {
     <main>
       <PageHero title={name} single_product />
       <div className={styles.singlepage_container}>
-        <Link to='/products' className={styles.back_to_products_btn}>
+        <Link to="/products" className={styles.back_to_products_btn}>
           back to products
         </Link>
         <div className={styles.singlepage_center}>
-          <ProductImages />
+          <ProductImages images={images} />
           <section className={styles.singlepage_content}>
             <h2>{name}</h2>
             <Stars />
@@ -63,7 +63,7 @@ const SingleProductPage = () => {
             <p className={styles.singlepage_desc}>{description}</p>
             <p className={styles.singlepage_info}>
               <span>Available : </span>
-              {stock > 0 ? 'In stock' : 'Out of stock'}
+              {stock > 0 ? "In stock" : "Out of stock"}
             </p>
             <p className={styles.singlepage_info}>
               <span>SKU : </span>
