@@ -18,6 +18,8 @@ import CartContent from './CartContent/CartContent';
 import PageHero from './PageHero/PageHero';
 import Product from './Product/Product';
 import AmountButtons from './AmountButtons/AmountButtons';
+import GridView from './GridView/GridView';
+import ListView from './ListView/ListView';
 
 export {
   FeaturedProducts,
@@ -40,4 +42,6 @@ export {
   PageHero,
   Product,
   AmountButtons,
+  GridView,
+  ListView,
 };
