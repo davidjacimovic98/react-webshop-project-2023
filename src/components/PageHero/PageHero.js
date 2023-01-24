@@ -8,7 +8,8 @@ const PageHero = ({ title, single_product }) => {
       <div className={styles.center_div}>
         <h3>
           <Link to='/'>Home</Link>/{' '}
-          {single_product && <Link to='/products'>Products</Link>}/{' '}
+          {single_product && <Link to='/products'>Products</Link>}
+          {single_product && '/'}{' '}
           <span className={styles.pagehero_title}>{title}</span>
         </h3>
       </div>

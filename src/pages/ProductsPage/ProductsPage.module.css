@@ -1,0 +1,18 @@
+.products_container {
+  min-height: calc(100vh - (20vh + 150px));
+}
+
+.products_center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  display: grid;
+  gap: 45px 25px;
+  margin: 60px auto;
+}
+
+@media (min-width: 768px) {
+  .products_center {
+    grid-template-columns: 200px 1fr;
+  }
+}

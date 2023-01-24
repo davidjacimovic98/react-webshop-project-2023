@@ -1,0 +1,20 @@
+.gridview_products {
+  display: grid;
+  gap: 30px 25px;
+}
+
+.gridview_products img {
+  height: 175px;
+}
+
+@media (min-width: 992px) {
+  .gridview_products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1170px) {
+  .gridview_products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
