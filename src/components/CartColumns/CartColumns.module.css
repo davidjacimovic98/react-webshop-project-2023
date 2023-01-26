@@ -1,0 +1,33 @@
+.cartcolumns_container {
+  display: none;
+}
+
+@media (min-width: 776px) {
+  .cartcolumns_container {
+    display: block;
+  }
+
+  .cartcolumns_content {
+    display: grid;
+    grid-template-columns: 316px 1fr 1fr 1fr auto;
+    justify-items: center;
+    column-gap: 15px;
+  }
+
+  .cartcolumns_content h5 {
+    color: var(--clr-grey-5);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: var(--spacing);
+  }
+}
+
+.cartcolumns_content span {
+  width: 30px;
+  height: 30px;
+}
+
+.cartcolumns_container hr {
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
