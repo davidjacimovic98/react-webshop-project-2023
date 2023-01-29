@@ -1,15 +1,19 @@
-import React from "react";
-import styles from "./CartItem.module.css";
-import { AmountButtons } from "../../components";
-import { formatPrice } from "../../utils/helpers";
-import { useCartContext } from "../../context/cart_context";
-import { FaTrash } from "react-icons/fa";
+import React from 'react';
+import styles from './CartItem.module.css';
+import { AmountButtons } from '../../components';
+import { formatPrice } from '../../utils/helpers';
+import { useCartContext } from '../../context/cart_context';
+import { FaTrash } from 'react-icons/fa';
 
 const CartItem = ({ id, image, name, color, price, amount }) => {
   const { removeItem, toggleAmount } = useCartContext();
-  const increase = () => {};
+  const increase = () => {
+    toggleAmount(id, 'increase');
+  };
 
-  const decrease = () => {};
+  const decrease = () => {
+    toggleAmount(id, 'decrease');
+  };
 
   return (
     <article className={styles.cartitem_container}>
@@ -27,7 +31,7 @@ const CartItem = ({ id, image, name, color, price, amount }) => {
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
       <h5 className={styles.subtotal}>{formatPrice(price * amount)}</h5>
       <button
-        type="button"
+        type='button'
         className={styles.remove_btn}
         onClick={() => removeItem(id)}
       >
