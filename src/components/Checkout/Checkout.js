@@ -4,7 +4,6 @@ import { useUserContext } from '../../context/user_context';
 import { useCartContext } from '../../context/cart_context';
 import { formatPrice } from '../../utils/helpers';
 import { Link } from 'react-router-dom';
-import { GiButtonFinger } from 'react-icons/gi';
 
 const Checkout = () => {
   const { myUser } = useUserContext();

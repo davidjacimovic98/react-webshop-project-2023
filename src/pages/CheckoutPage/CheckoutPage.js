@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './CheckoutPage.module.css';
 import { PageHero, Checkout } from '../../components';
 
 const CheckoutPage = () => {
