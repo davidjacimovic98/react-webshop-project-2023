@@ -1,0 +1,11 @@
+.loading_container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.loading_container h1 {
+  color: var(--clr-grey-1);
+  font-size: 40px;
+  letter-spacing: var(--spacing);
+}

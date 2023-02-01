@@ -1,14 +1,16 @@
-import React from 'react'
-import styles from './Navbar.module.css'
-import logo from '../../assets/logo.svg'
-import { FaBars } from 'react-icons/fa'
-import { CartButtons } from '../../components'
-import { links } from '../../utils/constants'
-import { Link } from 'react-router-dom'
-import { useProductsContext } from '../../context/products_context'
+import React from 'react';
+import styles from './Navbar.module.css';
+import logo from '../../assets/logo.svg';
+import { FaBars } from 'react-icons/fa';
+import { CartButtons } from '../../components';
+import { links } from '../../utils/constants';
+import { Link } from 'react-router-dom';
+import { useProductsContext } from '../../context/products_context';
+import { useUserContext } from '../../context/user_context';
 
 const Navbar = () => {
-  const { openSidebar } = useProductsContext()
+  const { openSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
 
   return (
     <nav className={styles.nav_container}>
@@ -27,20 +29,25 @@ const Navbar = () => {
         </div>
         <ul className={styles.nav_links}>
           {links.map((link) => {
-            const { id, text, url } = link
+            const { id, text, url } = link;
             return (
               <li key={id}>
                 <Link to={url}>{text}</Link>
               </li>
-            )
+            );
           })}
+          {myUser && (
+            <li>
+              <Link to='/checkout'>Checkout</Link>
+            </li>
+          )}
         </ul>
         <div className={styles.cart_btns_visible}>
           <CartButtons />
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

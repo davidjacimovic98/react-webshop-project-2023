@@ -1,14 +1,16 @@
-import React from 'react'
-import styles from './Sidebar.module.css'
-import logo from '../../assets/logo.svg'
-import { FaTimes } from 'react-icons/fa'
-import { links } from '../../utils/constants'
-import { CartButtons } from '../../components'
-import { Link } from 'react-router-dom'
-import { useProductsContext } from '../../context/products_context'
+import React from 'react';
+import styles from './Sidebar.module.css';
+import logo from '../../assets/logo.svg';
+import { FaTimes } from 'react-icons/fa';
+import { links } from '../../utils/constants';
+import { CartButtons } from '../../components';
+import { Link } from 'react-router-dom';
+import { useProductsContext } from '../../context/products_context';
+import { useUserContext } from '../../context/user_context';
 
 const Sidebar = () => {
-  const { isSidebarOpen, closeSidebar } = useProductsContext()
+  const { isSidebarOpen, closeSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
 
   return (
     <div className={styles.sidebar_container}>
@@ -37,27 +39,29 @@ const Sidebar = () => {
         </div>
         <ul className={styles.sidebar_links}>
           {links.map((link) => {
-            const { id, text, url } = link
+            const { id, text, url } = link;
             return (
               <li key={id}>
                 <Link to={url} onClick={closeSidebar}>
                   {text}
                 </Link>
               </li>
-            )
+            );
           })}
-          <li>
-            <Link to='/checkout' onClick={closeSidebar}>
-              checkout
-            </Link>
-          </li>
+          {myUser && (
+            <li>
+              <Link to='/checkout' onClick={closeSidebar}>
+                checkout
+              </Link>
+            </li>
+          )}
         </ul>
         <div className={styles.cart_btns_visible}>
           <CartButtons />
         </div>
       </aside>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
