@@ -1,5 +1,6 @@
 import {
   AboutPage,
+  AuthWrapper,
   CartPage,
   CheckoutPage,
   ErrorPage,
@@ -7,15 +8,15 @@ import {
   PrivateRoute,
   ProductsPage,
   SingleProductPage,
-} from './pages'
+} from './pages';
 
-import { Navbar, Sidebar, Footer } from './components'
+import { Navbar, Sidebar, Footer } from './components';
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <AuthWrapper>
       <Navbar />
       <Sidebar />
       <Routes>
@@ -23,13 +24,20 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/products' element={<ProductsPage />} />
-        <Route path='/checkout' element={<CheckoutPage />} />
+        <Route
+          path='/checkout'
+          element={
+            <PrivateRoute>
+              <CheckoutPage />
+            </PrivateRoute>
+          }
+        />
         <Route path='/products/:id' element={<SingleProductPage />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
-    </div>
-  )
+    </AuthWrapper>
+  );
 }
 
-export default App
+export default App;
