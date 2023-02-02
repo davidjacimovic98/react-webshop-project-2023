@@ -62,6 +62,10 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
   border-color: transparent;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .checkout_link:hover {
@@ -72,12 +76,5 @@
 @media (min-width: 776px) {
   .totals_container {
     justify-content: flex-end;
-  }
-
-  .checkout_link {
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-    font-weight: 700;
   }
 }

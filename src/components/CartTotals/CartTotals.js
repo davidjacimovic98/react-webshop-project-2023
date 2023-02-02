@@ -11,7 +11,7 @@ const CartTotals = () => {
 
   return (
     <section className={styles.totals_container}>
-      <div>
+      <div className={styles.main_div}>
         <article className={styles.totals_content}>
           <h5>
             Subtotal : <span>{formatPrice(total_amount)}</span>
