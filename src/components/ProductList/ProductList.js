@@ -1,7 +1,6 @@
 import React from 'react';
 import { useFiltersContext } from '../../context/filters_context';
 import { GridView, ListView } from '../../components';
-import styles from './ProductList.module.css';
 
 const ProductList = () => {
   const { filtered_products, grid_view } = useFiltersContext();

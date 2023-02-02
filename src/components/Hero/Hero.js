@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from './Hero.module.css'
-import { Link } from 'react-router-dom'
-import heroBcg from '../../assets/hero-bcg.jpeg'
-import heroBcg2 from '../../assets/hero-bcg-2.jpeg'
+import React from 'react';
+import styles from './Hero.module.css';
+import { Link } from 'react-router-dom';
+import heroBcg from '../../assets/hero-bcg.jpeg';
+import heroBcg2 from '../../assets/hero-bcg-2.jpeg';
 
 const Hero = () => {
   return (
@@ -21,11 +21,11 @@ const Hero = () => {
         </Link>
       </article>
       <article className={styles.hero_img_container}>
-        <img src={heroBcg} alt='image of table' className={styles.big_img} />
+        <img src={heroBcg} alt='nice desk' className={styles.big_img} />
         <img src={heroBcg2} alt='person working' className={styles.small_img} />
       </article>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

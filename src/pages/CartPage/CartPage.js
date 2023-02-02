@@ -5,7 +5,7 @@ import { useCartContext } from '../../context/cart_context';
 import { Link } from 'react-router-dom';
 
 const CartPage = () => {
-  const { cart, total_amount } = useCartContext();
+  const { cart } = useCartContext();
 
   if (cart.length < 1) {
     return (

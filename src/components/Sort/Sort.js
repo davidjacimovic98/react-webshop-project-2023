@@ -4,14 +4,8 @@ import { useFiltersContext } from '../../context/filters_context';
 import { BsFillGridFill, BsList } from 'react-icons/bs';
 
 const Sort = () => {
-  const {
-    filtered_products,
-    grid_view,
-    setGridView,
-    setListView,
-    sort,
-    updateSort,
-  } = useFiltersContext();
+  const { filtered_products, grid_view, setGridView, setListView, updateSort } =
+    useFiltersContext();
 
   return (
     <section className={styles.sort_container}>
